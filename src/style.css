@@ -7,13 +7,14 @@
 }
 
 :root {
-    --text-color: #111010 !important;
+    --text-color: #0f2a1b !important;
     font-size: 62.5%;
     font-family: "Inter", sans-serif;
 }
 
 body {
     font-size: 1.6rem;
+    background: #f8fafc;
     height: 100vh;
     display: grid;
     place-content: center;
@@ -21,10 +22,8 @@ body {
 }
 
 main {
-    width: 80rem;
-    height: 69.2rem;
     padding: 6.4rem 8rem;
-    background: #002d09;
+    background: #ffffff;
     box-shadow: 0rem 0.4rem 3.2rem rgba(15, 23, 42, 0.15);
     border-radius: 1.6rem;
     display: grid;
@@ -44,7 +43,7 @@ section h2 {
 }
 
 .money-wrapper {
-    background-color: rgb(203, 217, 196);
+    background-color: white;
     outline: 0.1rem solid #96b894;
     width: 27rem;
     padding: 1.6rem;
@@ -78,11 +77,19 @@ section h2 {
 /*Dropdwn*/
 
 .dropdown {
-    width: 12.4rem;
+    --bg-hover: #ede9fe;
+    width: 13rem;
     position: absolute;
     top: 0;
     right: 0;
     background-color: #e9feec;
+    height: 5.6rem;
+    overflow: hidden;
+}
+
+.dropdown:hover {
+    height: fit-content;
+    overflow: initial;
 }
 
 .selected:hover {
@@ -92,15 +99,29 @@ section h2 {
     border-radius: 0 0.8rem 0.8rem 0;
 }
 
+.selected {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    border-radius: 0 0.8rem 0.8rem 0;
+    padding: 1.6rem;
+    cursor: pointer;
+}
+
 .selected:before {
     content: "";
     height: 2.4rem;
-    width: 0.1rem;
-    background-color: #94b899;
+    width: 0.2rem;
+    background-color: #94b895;
+    position: absolute;
+    left: 0;
 }
 
 .selected:after {
     content: "";
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url(../assets/chevron-down.svg) no-repeat;
 }
 
 .fi.fis {
@@ -108,9 +129,27 @@ section h2 {
     border-radius: 50%;
 }
 
+
+/*UL*/
+
+ul {
+    list-style: none;
+    background-color: #94b895;
+    box-shadow: 0rem 0.4rem 3.2rem rgba(15, 23, 42, 0.15);
+    border-radius: 8px;
+    padding: 0;
+    width: 16rem;
+    max-height: 17rem;
+    margin-top: 0.8rem;
+}
+
+li {
+    padding: 1.2rem 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
 .cambio .wrapper {
     margin-top: 2.4rem;
-    width: 59.2rem;
-    height: 35.6rem;
-    border: 1px solid red;
 }
